@@ -13,6 +13,27 @@
     src: url(fonts/opensans-regular-webfont.ttf);
 }
 
+.bienvenida{
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
 .fondo {
     position: absolute;
     z-index: -999;
@@ -23,11 +44,10 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
- 
+
 *{
     margin: 0;
     padding: 0;
-
 }
 body {
     font-family: opensans-regular-webfont;
@@ -44,7 +64,6 @@ header {
 
 h1 {
     float: left;
-    list-style: none;
     overflow: hidden; 
     display: block; 
     padding: 20px;
@@ -78,7 +97,6 @@ nav ul li:hover {
 }
 
 .bienvenidos{
-    
     width: 100%;
     height: 100vh;
     color: #fff;
@@ -87,7 +105,6 @@ nav ul li:hover {
     justify-content: center;
     align-content: center;
     text-align: center;
-    
 }
 
 h2{
@@ -106,13 +123,13 @@ h2{
     border-radius: 4px;
     transition: background-color .5s;
 }
+
 .boton:hover {
     background-color:#ff521e;
     border-radius: 4px;
 } 
 
 section {
-    
     background-color: #eb633a;
     display: flex;
     justify-content: center;
@@ -122,6 +139,7 @@ section {
 }
 section article img {
     margin: 20px;
+    border-radius: 50%;
 }
 
 .textogrande{
@@ -149,42 +167,53 @@ section article {
 }
 
 .textopequeno {
+    text-align: justify;
     margin: 15px;
     margin-bottom: 20px;
 }
 
-.second {
+.second-section {
+    padding: 50px 0 50px 0;
     background: #fff;
     color: black;
-    width: 100vw;
-    height: 380px;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    display: block;
 }
-.second div {
+.second-section .servicios{
+    display: block;
+    text-align: center;
+}
+.second-section div {
     display: flex;
     flex-direction: row;
-    margin: 0 80px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px ;
 }
-
-.second div div {
+.second-section div div {
     display: flex;
     flex-direction: column;
 }
 
-.second div div i {
+.second-section div div i {
     color: #eb633a;
     font-size: 80px;
     margin-bottom: 40px;
 }
 
-.second div div b {
+.second-section div div b {
+    font-weight: bold;
     font-size: 20px;
 }
-section h2 {
-    font-size: 40px;
+.section3 .proyectos {
+    font-size: 50px;
+    margin: 40px;
 }
 
+.servicios{
+    font-size: 40px;
+    margin-bottom: 60px;
+}
 .section3 {
     background-color: rgb(65, 65, 65);
     display: flex;
@@ -207,7 +236,13 @@ section h2 {
     background-color: #1b1b1b;
     width: 100vw;
     height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
+
 .images img{
     width: 400px;
 }
